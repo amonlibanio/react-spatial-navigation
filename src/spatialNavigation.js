@@ -439,7 +439,7 @@ class SpatialNavigation {
         const eventType = this.getEventType(event.keyCode);
 
 //         Reflect.deleteProperty(this.pressedKeys, eventType);
-        deleteProperty this.pressedKeys[eventType];
+        delete this.pressedKeys[eventType];
 
         if (this.throttle && !this.throttleKeypresses) {
           this.keyDownEventListener.cancel();
